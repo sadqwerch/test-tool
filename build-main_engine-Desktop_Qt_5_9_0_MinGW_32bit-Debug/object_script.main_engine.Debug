@@ -1,0 +1,15 @@
+INPUT(
+./debug\main.o
+./debug\mainengine.o
+./debug\datacontrol.o
+./debug\netcontrol.o
+./debug\monitorwindow.o
+./debug\reportwindow.o
+./debug\adjustdialog.o
+./debug\moc_mainengine.o
+./debug\moc_datacontrol.o
+./debug\moc_netcontrol.o
+./debug\moc_monitorwindow.o
+./debug\moc_reportwindow.o
+./debug\moc_adjustdialog.o
+);
