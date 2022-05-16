@@ -73,17 +73,13 @@ MainEngine::MainEngine(QWidget *parent) :
 
     connect(netcontroller,SIGNAL(SlaveEngStartSignal(int)),this,SLOT(SlaveEngStart(int)));
     connect(netcontroller,SIGNAL(SlaveEngStopSignal(int)),this,SLOT(SlaveEngStop(int)));
-    connect(netcontroller,SIGNAL(SlaveEngRequestWindSignal(int,int,int)),this,SLOT(SlaveEngRequestWind(int,int,int)));
-    connect(netcontroller,SIGNAL(SlaveEngStopWindSignal(int)),this,SLOT(SlaveEngStopWind(int)));
+    connect(netcontroller,SIGNAL(SlaveEngRequestWindSignal(int,int,int)),this,SLOT(SlaveEngReques(int,int,int)));
+    connect(netcontroller,SIGNAL(SlaveEngStopWindSignal(int)),this,SLOT(SlaveEngStop(int)));
     connect(netcontroller,SIGNAL(UpdateRoomTempSignal(int,int,int)),this,SLOT(UpdateRoomTemp(int,int,int)));
 
     connect(this, SIGNAL(SpeedDispatchSignal(int)), this, SLOT(SpeedDispatch(int)));
 
-    connect(ui->monitor, &QPushButton::clicked, this, &MainEngine::SetMonitorVisible);
-    connect(ui->report, &QPushButton::clicked, this, &MainEngine::SetReportVisible);
 
-    connect(reportwindow,&ReportWindow::FetchAllData,datacontroller,&DataControl::FetchAllData);
-    connect(reportwindow,&ReportWindow::ClearAllData,datacontroller,&DataControl::ClearAllData);
 }
 
 MainEngine::~MainEngine()
