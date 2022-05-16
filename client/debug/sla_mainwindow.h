@@ -33,8 +33,8 @@ public slots:
     void OnModeClick(int id);
     void SlaveEngStart(int roomid);
     void SlaveEngStop(int roomid);
-    void SlaveEngRequestWind(int roomid, int tar_t, int spped);
-    void SlaveEngStopWind(int roomid);
+    void SlaveEngRequest(int roomid, int tar_t, int spped);
+    void SlaveEngStop(int roomid);
     void SpeedDispatch(int roomid);
     void UpdateRoomTemp(int roomid,int roomtemp,int windspeed);
     void OnOffMainEngControl();
