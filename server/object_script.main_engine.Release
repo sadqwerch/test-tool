@@ -1,0 +1,15 @@
+INPUT(
+./release\main.o
+./release\mainengine.o
+./release\datacontrol.o
+./release\netcontrol.o
+./release\monitorwindow.o
+./release\reportwindow.o
+./release\adjustdialog.o
+./release\moc_mainengine.o
+./release\moc_datacontrol.o
+./release\moc_netcontrol.o
+./release\moc_monitorwindow.o
+./release\moc_reportwindow.o
+./release\moc_adjustdialog.o
+);
