@@ -169,7 +169,7 @@ void NetControl::RecvOpenAck(bool _t1)
 }
 
 // SIGNAL 1
-void NetControl::RecvWind(bool _t1)
+void NetControl::Recvd(bool _t1)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
     QMetaObject::activate(this, &staticMetaObject, 1, _a);
